@@ -4,15 +4,16 @@ export function goldenRatio(n: number): number{
     return n * gR;
 }
 
-console.log(goldenRatio(7))
-
-function radians(degrees: number): number {
-    return degrees * Math.PI / 180;
+export function radians(degrees: number): number {
+    let deg2rad = Math.PI / 180;
+    return degrees * deg2rad;
   };
 
+export function degrees(radians: number): number {
+    let rad2deg = 180 / Math.PI;
+    return radians * rad2deg;
+  };
 
-
-module.exports.goldenRatio = goldenRatio
-
+console.log(degrees(90))
 
 
