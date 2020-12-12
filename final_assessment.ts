@@ -14,6 +14,10 @@ export function degrees(radians: number): number {
     return radians * rad2deg;
   };
 
-console.log(degrees(90))
+export function toDollar(n: number): string{
+    const dolladollabillsyall = "$" + (n).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    return dolladollabillsyall;
+  }
 
+  
 

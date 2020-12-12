@@ -1,4 +1,4 @@
-const { expect } = require('@jest/globals')
+const { expect, test } = require('@jest/globals')
 const final = require('./final_assessment') 
 
 test("Testing goldenRatio", () => {
@@ -16,4 +16,10 @@ test("Testing goldenRatio", () => {
         expect(final.degrees(1.3089969389957472)).toBe(75)
         expect(final.degrees(90)).toBe(5156.620156177409)
         expect(final.degrees(75)).toBe(4297.183463481174)
+    })
+
+    test("Testing toDollar", () => {
+        expect(final.toDollar(482)).toBe('$482.00')
+        expect(final.toDollar(4.995)).toBe('$5.00')
+        expect(final.toDollar(99.009)).toBe('$99.01')
     })

@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.degrees = exports.radians = exports.goldenRatio = void 0;
+exports.toDollar = exports.degrees = exports.radians = exports.goldenRatio = void 0;
 function goldenRatio(n) {
     var gR = 1.61803398875;
     return n * gR;
@@ -18,4 +18,8 @@ function degrees(radians) {
 }
 exports.degrees = degrees;
 ;
-console.log(degrees(75));
+function toDollar(n) {
+    var dolladollabillsyall = "$" + (n).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    return dolladollabillsyall;
+}
+exports.toDollar = toDollar;
