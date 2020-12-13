@@ -1,11 +1,13 @@
 "use strict";
 exports.__esModule = true;
-exports.toDollar = exports.degrees = exports.radians = exports.goldenRatio = void 0;
+exports.randomInt = exports.toDollar = exports.degrees = exports.radians = exports.goldenRatio = void 0;
+
 function goldenRatio(n) {
     var gR = 1.61803398875;
     return n * gR;
 }
 exports.goldenRatio = goldenRatio;
+;
 function radians(degrees) {
     var deg2rad = Math.PI / 180;
     return degrees * deg2rad;
@@ -23,3 +25,10 @@ function toDollar(n) {
     return dolladollabillsyall;
 }
 exports.toDollar = toDollar;
+;
+
+function randomInt(start, end) {
+    return Math.floor(Math.random() * (end - start + 1)) + start;
+}
+exports.randomInt = randomInt;
+
